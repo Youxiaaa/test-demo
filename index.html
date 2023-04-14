@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/tailwind.min.css">
+  <link rel="stylesheet" href="./css/global.css">
+  <title>音樂撥放器</title>
+</head>
+<body>
+  <section class="w-full h-screen flex items-center justify-center">
+    <div class="shadow-lg p-5 rounded-lg flex items-center gap-x-5">
+      <audio id="myAudio" src="./audio/audioFile.mp3" ></audio>
+      <button onclick="playAudio()">
+        <img src="./img/play.png" alt="" class="control__btn">
+      </button>
+      <button onclick="pauseAudio()">
+        <img src="./img/pause.webp" alt="" class="control__btn">
+      </button>
+      <button onclick="changeSpeed(0.8)">慢</button>
+      <button onclick="changeSpeed(1)">正常</button>
+      <button onclick="changeSpeed(1.2)">快</button>
+      <input type="range" min="0" max="1" step="0.1" value="0.5" onchange="changeVolume(this.value)">
+    </div>
+  </section>
+</body>
+<script src="./js/audio.js"></script>
+</html>
