@@ -10,6 +10,7 @@ let currentPosition = 0;
 
 let rateRef = 1;
 
+// 播放語音
 function playSpeech() {
   utterance = new SpeechSynthesisUtterance(speech__text);
   utterance.lang = 'zh-TW';
@@ -28,6 +29,7 @@ function playSpeech() {
   pause__btn.style.display = 'block'
 }
 
+// 暫停播放
 function pauseSpeech() {
   speechSynthesis.pause();
 
@@ -35,6 +37,7 @@ function pauseSpeech() {
   resume__btn.style.display = 'block'
 }
 
+// 重新撥放
 function resumeSpeech() {
   speechSynthesis.resume();
 
@@ -42,6 +45,7 @@ function resumeSpeech() {
   resume__btn.style.display = 'none'
 }
 
+// 停止播放
 function stopSpeech() {
   speechSynthesis.cancel();
 
@@ -50,6 +54,7 @@ function stopSpeech() {
   resume__btn.style.display = 'none'
 }
 
+// 更新音量
 function updateSpeech() {  
   const volume = parseFloat(volumeInput.value);
   const rate = parseFloat(rateRef);
@@ -79,6 +84,7 @@ function updateSpeech() {
   }
 }
 
+// 更新語速
 function updateRate(num) {
   rateRef = num;
 
@@ -110,6 +116,6 @@ function updateRate(num) {
   }
 }
 
-window.addEventListener('beforeunload', (event) => {
+window.addEventListener('beforeunload', () => {
   speechSynthesis.cancel();
 });

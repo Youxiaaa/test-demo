@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>文字轉語音播放器</title>
-    <link rel="stylesheet" href="./css/tailwind.min.css">
+    <link rel="stylesheet" href="./css/global.css">
 </head>
 <body>
-  <div class="p-5">
-    <div class="flex">
+  <div class="p-5 md:p-10">
+    <div class="flex justify-center">
       <div class="p-5 rounded-xl shadow-lg border border-black border-2 flex justify-around gap-x-5">
         <button id="play-btn" onclick="playSpeech()">
           <img src="./img/play.png" alt="" class="h-5">
@@ -27,14 +27,14 @@
 
         <button onclick="updateRate(0.5)">慢</button>
         <button onclick="updateRate(1)">普通</button>
-        <button onclick="updateRate(2.5)">快</button>
+        <button onclick="updateRate(2)">快</button>
       </div>
     </div>
-    <div class="flex flex-col gap-y-5 mt-5 speech__container">
+    <div class="flex flex-col gap-y-5 mt-5 speech__container w-full max-w-[1440px] mx-auto items-center">
       <h1 class="mb-5 text-2xl font-bold">一圖看本周天氣！「最強春雨」襲台時間曝 全台連下2天雨</h1>
       <p>中央氣象局表示，今（17日）、明（18日）各地暖熱，但周三起因為鋒面接近，容易出現雷雨，提醒民眾注意瞬間大雨、雷擊和強風，氣象粉專「觀氣象看天氣」指出，最強一波春雨將在周三來襲。</p>
       <img src="./img/news.webp" alt="周三起因為鋒面接近，容易出現雷雨，提醒民眾注意瞬間大雨、雷擊和強風。（示意圖。圖片來源：中央社）" class="w-full md:w-1/2">
-      <span class="text-sm text-gray-400 -mt-4">周三起因為鋒面接近，容易出現雷雨，提醒民眾注意瞬間大雨、雷擊和強風。（示意圖。圖片來源：中央社）</span>
+      <span class="text-[12px] text-gray-400 -mt-4">周三起因為鋒面接近，容易出現雷雨，提醒民眾注意瞬間大雨、雷擊和強風。（示意圖。圖片來源：中央社）</span>
       <p>中央氣象局指出，今、明各地暖熱，大多為多雲到晴，花東、恆春局部偶雨，西半部山區午後零星雨，南高屏留意高溫，注意熱傷害，周三鋒面接近、周四通過，易有雷雨，注意瞬間大雨、雷擊和強風，此波鋒面通過，雖然可能伴隨較明顯的雨勢，但是要為中南部一次解旱仍有困難，請大家持續珍惜水資源，周五、周六降雨緩但天氣仍不穩定，北東地區及中南部山區偶有雨，但是降雨時空分佈變數大，周日漸轉穩定、晴到多雲，注意山區午後雷陣雨，春季天氣系統變化迅速，預報不確定性較大，提醒民眾多留意最新預報資訊。</p>
       <p>氣象專家彭啟明在臉書表示，今、明天氣悶熱，南部要注意高溫變化，留意防曬、多補充水分，周三起鋒面系統靠近，氣溫依舊悶熱，西半部午後容易有對流發展，帶來局部短暫陣雨或雷雨，周四全台降雨機會增加，注意變化，周五至周六鋒面遠離，東北風影響，北部及東半部短暫陣雨，中南部多雲天氣，山區短暫陣雨機會，周日天氣逐漸好轉，多雲有陽光。</p>
       <p>氣象粉專「觀氣象看天氣」在臉書指出，歐洲中期天氣預報中心最新預測，入春以來最強一波春雨將在周三來襲，周三到周四西半部由北到南都要留意較大雨勢。</p>
