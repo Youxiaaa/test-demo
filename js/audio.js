@@ -109,3 +109,7 @@ function updateRate(num) {
     speechSynthesis.speak(newUtterance);
   }
 }
+
+window.addEventListener('beforeunload', (event) => {
+  speechSynthesis.cancel();
+});
